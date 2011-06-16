@@ -10,14 +10,14 @@ Add it to your Gemfile:
 
 Configure your Rails (or Ruby) application to use the related Liferay server. For example, in Rails, create a liferay_content.rb file inside the initializers folder and place inside this file the configuration: 
 
-LiferayContent.setup do |config|
-  config.host     = "www.your-liferay-host.com"
-  config.port     = 80
-  config.uri      = "/tunnel-web/secure/json"
-  config.group_id = 112345
-  config.login    = "fc@youcompany.com"
-  config.password = "abcde"
-end
+	LiferayContent.setup do |config|
+  	config.host     = "www.your-liferay-host.com"
+  	config.port     = 80
+  	config.uri      = "/tunnel-web/secure/json"
+  	config.group_id = 112345
+  	config.login    = "fc@youcompany.com"
+  	config.password = "abcde"
+		end
 
 == Usage
 
@@ -25,11 +25,13 @@ end
 
 Retrieve the article content from a controller:
 
-@content = LiferayContent::Article.get(39860).html_safe
+	@content = LiferayContent::Article.get(39860).html_safe
 
 === View 
 
-Display the content in a view: <%= @content %>
+Display the content in a view: 
+
+	<%= @content %>
 
 
 
